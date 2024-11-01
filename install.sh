@@ -22,7 +22,8 @@ apt-install() {
 sudo apt update && sudo apt upgrade -y
 
 apt-install cargo
+apt-install cmake # need to build starship
 apt-install tig
 apt-install tmux
 
-cargo install starship --locked
+cargo install --version 1.20.1 starship # ~>1.21.0 needs rust v1.80.0 or newer

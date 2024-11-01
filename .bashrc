@@ -125,13 +125,17 @@ if ! shopt -oq posix; then
 fi
 
 # starship
-eval "$($HOME/.cargo/bin/starship init bash)"
+if [ -f "$($HOME/.cargo/bin/starship)" ]; then
+    eval "$($HOME/.cargo/bin/starship init bash)"
+if
 
 # colorscheme (base16)
 # Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/"
-[ -n "$PS1" ] && \
-    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
-        source "$BASE16_SHELL/profile_helper.sh"
+if [ -d $BASE16_SHELL ]; then
+    [ -n "$PS1" ] && \
+        [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
+            source "$BASE16_SHELL/profile_helper.sh"
         
-base16_dracula
+    base16_dracula
+fi

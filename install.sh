@@ -21,5 +21,6 @@ apt-install() {
 }
 sudo apt update && sudo apt upgrade -y
 
+apt-install starship
 apt-install tig
 apt-install tmux

@@ -125,7 +125,7 @@ if ! shopt -oq posix; then
 fi
 
 # starship
-eval "$(starship init bash)"
+eval "$($HOME/.cargo/bin/starship init bash)"
 
 # colorscheme (base16)
 # Base16 Shell

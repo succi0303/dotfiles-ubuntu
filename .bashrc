@@ -9,8 +9,6 @@ case $- in
 esac
 
 export LANG=ja_JP.UTF-8
-export LC_ALL=ja_JP.UTF-8
-export LC_MESSAGES=ja_JP.UTF-8
 export PATH=$PATH:/sbin
 export PATH=$PATH:/usr/sbin
 export EDITOR=/usr/bin/vim

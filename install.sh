@@ -7,7 +7,7 @@ DOTDIR="$( cd "$( dirname "$0" )" && pwd )"
 
 echo "START create dotfile links."
 for dotfilepath in $DOTDIR/.??*; do
-    DOTFILE="$(basename dotfilepath)"
+    DOTFILE="$(basename $dotfilepath)"
     [[ $DOTFILE =~ $IGNORE_PATTERN ]] && continue
     ln -snfv "$dotfilepath" "$HOME/$DOTFILE"
 done

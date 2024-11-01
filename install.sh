@@ -30,4 +30,4 @@ apt-install tmux
 git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
 
 # Rust tools
-cargo install --version 1.20.1 starship # ~>1.21.0 needs rust v1.80.0 or newer
+#cargo install --version 1.20.1 starship # ~>1.21.0 needs rust v1.80.0 or newer

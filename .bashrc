@@ -134,7 +134,7 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
 base16_dracula
 
 # starship
-if [ -f "$($HOME/.cargo/bin/starship)" ]; then
+if [ -f $HOME/.cargo/bin/starship ]; then
     eval "$($HOME/.cargo/bin/starship init bash)"
 fi
 

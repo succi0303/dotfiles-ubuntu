@@ -4,7 +4,6 @@ call plug#begin('~/.vim/autoload/plugged')
 Plug 'airblade/vim-gitgutter'
 Plug 'cohama/lexima.vim'
 Plug 'easymotion/vim-easymotion'
-Plug 'EdenEast/nightfox.nvim'
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -79,7 +78,7 @@ if filereadable(expand('~/.vimrc.local'))
   source ~/.vimrc.local
 endif
 
-colorscheme nightfox
+colorscheme slate
 
 " lightline.vim
   let g:lightline = {

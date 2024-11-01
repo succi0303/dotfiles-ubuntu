@@ -1,5 +1,7 @@
 #!/bin/bash -e
 
+# Install dotfiles
+
 IGNORE_PATTERN="^\.(git)"
 DOTDIR="$( cd "$( dirname "$0" )" && pwd )"
 
@@ -10,3 +12,14 @@ for dotfilepath in $DOTDIR/.??*; do
     ln -snfv "$dotfilepath" "$HOME/$dotfile"
 done
 echo "END create dotfile links."
+
+# Install apt packages
+
+apt-install() {
+  echo "Install $@"
+  sudo apt install -y "$@"
+}
+sudo apt update && sudo apt upgrade -y
+
+apt-install tig
+apt-install tmux

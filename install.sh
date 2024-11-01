@@ -26,7 +26,8 @@ apt-install cmake # need to build starship
 apt-install tig
 apt-install tmux
 
-cargo install --version 1.20.1 starship # ~>1.21.0 needs rust v1.80.0 or newer
-
 # colorscheme (base16)
 git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
+
+# Rust tools
+cargo install --version 1.20.1 starship # ~>1.21.0 needs rust v1.80.0 or newer

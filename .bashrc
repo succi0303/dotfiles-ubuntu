@@ -124,6 +124,16 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# bash prompt
+if [ -f ~/.git-prompt.sh ]; then
+    source ~/.git-prompt.sh
+fi
+if [ -f ~/.git-completion.sh ]; then
+    source ~/.git-completion.sh
+fi
+
+export PS1='\[\e[1;36m\][\D{%Y/%m/%d} \t] \[\e[1;32m\]\u@\h\[\e[00m\]:\[\e[1;34m\]\w\[\e[1;31m\]$(__git_ps1)\[\e[m\]\n\$ '
+
 # colorscheme (base16)
 # Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/"
@@ -138,3 +148,7 @@ if [ -f $HOME/.cargo/bin/starship ]; then
     eval "$($HOME/.cargo/bin/starship init bash)"
 fi
 
+# AWS CLI completion
+if [ -x aws_completer ] ; then
+    complete -C aws_completer aws
+fi

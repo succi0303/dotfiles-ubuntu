@@ -149,6 +149,6 @@ if [ -f $HOME/.cargo/bin/starship ]; then
 fi
 
 # AWS CLI completion
-if [ -f aws_completer ] ; then
-    complete -C /usr/bin/aws_completer aws
+if [ -f /usr/bin/aws_completer ] ; then
+    complete -C aws_completer aws
 fi

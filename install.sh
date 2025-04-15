@@ -18,11 +18,16 @@ apt-install() {
   echo "Install $@"
   sudo apt install -y "$@"
 }
+
+add-apt-repository -y ppa:ubuntuhandbook1/emacs
 sudo apt update && sudo apt upgrade -y
 
+apt-install git
 apt-install tig
 apt-install tmux
 apt-install vim
+apt-install emacs-nox
+apt-install emacs-common
 
 # git-completion and git-prompt
 curl -o ~/.git-completion.sh \

@@ -19,7 +19,7 @@ apt-install() {
   sudo apt install -y "$@"
 }
 
-add-apt-repository -y ppa:ubuntuhandbook1/emacs
+sudo add-apt-repository -y ppa:ubuntuhandbook1/emacs
 sudo apt update && sudo apt upgrade -y
 
 apt-install git

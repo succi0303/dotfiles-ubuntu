@@ -26,8 +26,9 @@ apt-install git
 apt-install tig
 apt-install tmux
 apt-install vim
-apt-install emacs-nox
-apt-install emacs-common
+apt-install stow
+# apt-install emacs-nox
+# apt-install emacs-common
 
 # git-completion and git-prompt
 curl -o ~/.git-completion.sh \
